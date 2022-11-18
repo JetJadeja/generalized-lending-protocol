@@ -1,33 +1,30 @@
-# fuse-v2 (WIP)
+# generalized-lending-protocol
 
-Smart contracts for the second iteration of Fuse by Rari Capital.
+A simple, modern, optimized lending protocol. Note that this codebase has not been audited and should therefore only be used an example/reference for other developers. 
 
-## Setup
+## Overview
 
-Fuse uses Foundry for compilation and testing. To install foundry, simply run:
+The lending contracts contained in this repository aim to resemble a fully open lending protocol, enabling anyone to create their own isolated lending markets, similar to Euler.xyz and Fuse by Rari Capital. 
 
-```
-cargo install --git https://github.com/gakonst/foundry --bin forge --locked
-```
-
-Next, to install all dependencies and setup the project, run:
-
-```
-make
-```
-
-To test the contracts, just run `forge test`. If you simply want to compile them, run `forge build`.
+In order to do this, the protocol consists of two main contracts: the `LendingPoolFactory` and `LendingPool`. The `LendingPoolFactory` can be utilized by pool creators to deploy individual `LendingPool` contracts. Each one of these contracts form their own, isolated lending markets, enabling users to lend and borrow different assets. 
 
 ## Architecture
 
-Unlike the Compound design, Fuse v2 does not employ the cToken model, in which each market is represented by separate contracts connected to each other through a Comptroller contract.
+Although most lending protocols are designed to support tokenized deposits by having seperate ERC20 contracts for each asset, this lending protocol uses a single contract to represent each lending market. This 1) makes the protocol far more efficient by heavily decreasing the number of cross-contract calls, and 2) makes it much easier for other protocols and developers to integrate with.
 
-Instead, Fuse v2 adopts the architecture depicted below, where each pool is represented by a single FusePool contract. This new architecture causes decreased deployment and execution costs, as all logic is stored and executed in a single contract, decreasing the amount of the cross-contract calls.
+While balances can no longer be fungible with this model, ERC20 and ERC1155 wrappers can easily be developed to enable tokenized deposits. 
 
-While balances can no longer be fungible on the base layer because all markets are represented by a single contract, ERC20 and ERC1155 wrappers can be easily developed.
-
-Instead of being stored within the FusePool contract, the funds will be held in various ERC4626 Vaults, enabling interest on idle funds, metagovernance, and so on...
+Another interesting feature built into the lending protocol is the storage of funds in ERC4626 vaults. Rather than holding the tokens within the `LendingPool` contract, they are transfered to an ERC4626 vault specified by the pool creator. This enables idle assets to be put to use in a variety of different ways (e.g. earning interest, metagovernance (token delegation), etc).
 
 <p align="center">
   <img src="https://i.imgur.com/FugCHSU.png" width="400px" />
 </p>
+
+## Setup
+
+This repository uses Foundry for compilation and testing. To build and test the contracts, you can run the following
+
+```sh
+forge build #compile
+forge test  # test
+```
