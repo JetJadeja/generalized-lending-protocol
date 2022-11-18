@@ -24,8 +24,6 @@ import {MockLiquidator} from "./mocks/MockLiquidator.sol";
 
 import {FixedPointMathLib} from "solmate/utils/FixedPointMathLib.sol";
 
-import "forge-std/console.sol";
-
 /// @title Lending Pool Factory Test Contract
 contract LendingPoolTest is DSTestPlus {
     using FixedPointMathLib for uint256;

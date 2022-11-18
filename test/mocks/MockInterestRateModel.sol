@@ -1,7 +1,5 @@
 pragma solidity 0.8.10;
 
-import "forge-std/console.sol";
-
 /// @title Interest Rate Module Interface
 contract MockInterestRateModel {
     /**
