@@ -4,7 +4,7 @@ pragma solidity 0.8.10;
 import {LendingPool, LendingPoolFactory} from "src/LendingPoolFactory.sol";
 
 import {MockPriceOracle} from "./mocks/MockPriceOracle.sol";
-import {PriceOracle} from "../interface/PriceOracle.sol";
+import {PriceOracle} from "src/interface/PriceOracle.sol";
 
 import {Authority} from "solmate/auth/Auth.sol";
 import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";

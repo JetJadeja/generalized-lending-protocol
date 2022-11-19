@@ -1,7 +1,7 @@
 pragma solidity 0.8.10;
 
-import {LendingPool, ERC4626, ERC20} from "../../LendingPool.sol";
-import {FlashBorrower} from "../../interface/FlashBorrower.sol";
+import {LendingPool, ERC4626, ERC20} from "../../src/LendingPool.sol";
+import {FlashBorrower} from "../../src/interface/FlashBorrower.sol";
 import "ds-test/test.sol";
 
 /// @title Mock Flash Borrower 2

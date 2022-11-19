@@ -1,6 +1,6 @@
 pragma solidity 0.8.10;
 
-import {LendingPool, ERC4626, ERC20, PriceOracle, FixedPointMathLib} from "../../LendingPool.sol";
+import {LendingPool, ERC4626, ERC20, PriceOracle, FixedPointMathLib} from "../../src/LendingPool.sol";
 import "ds-test/test.sol";
 
 /// @title Mock Liquidator 

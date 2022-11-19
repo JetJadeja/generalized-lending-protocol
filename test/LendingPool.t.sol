@@ -10,9 +10,9 @@ import {DSTestPlus} from "solmate/test/utils/DSTestPlus.sol";
 import {Authority} from "solmate/auth/Auth.sol";
 import {DSTest} from "ds-test/test.sol";
 
-import {PriceOracle} from "../interface/PriceOracle.sol";
-import {InterestRateModel} from "../interface/InterestRateModel.sol";
-import {FlashBorrower} from "../interface/FlashBorrower.sol";
+import {PriceOracle} from "src/interface/PriceOracle.sol";
+import {InterestRateModel} from "src/interface/InterestRateModel.sol";
+import {FlashBorrower} from "src/interface/FlashBorrower.sol";
 
 import {MockERC20} from "solmate/test/utils/mocks/MockERC20.sol";
 import {MockERC4626} from "./mocks/MockERC4626.sol";
