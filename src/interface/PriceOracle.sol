@@ -4,7 +4,7 @@ pragma solidity 0.8.10;
 import {ERC20} from "solmate/utils/SafeTransferLib.sol";
 
 /// @title Price Oracle Interface.
-/// @author Jet Jadeja <jet@rari.capital>
+/// @author Jet Jadeja <jet@pentagon.xyz>
 interface PriceOracle {
     /// @notice Get the price of an asset.
     /// @param asset The address of the underlying asset.

@@ -16,7 +16,7 @@ import {SafeCastLib} from "solmate/utils/SafeCastLib.sol";
 import {FixedPointMathLib} from "solmate/utils/FixedPointMathLib.sol";
 
 /// @title Lending Pool
-/// @author Jet Jadeja <jet@rari.capital>
+/// @author Jet Jadeja <jet@pentagon.xyz>
 /// @notice Minimal, gas optimized lending pool contract
 contract LendingPool is Auth {
     using SafeTransferLib for ERC20;

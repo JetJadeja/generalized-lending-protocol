@@ -8,7 +8,7 @@ import {Auth, Authority} from "solmate/auth/Auth.sol";
 import {Bytes32AddressLib} from "solmate/utils/Bytes32AddressLib.sol";
 
 /// @title Lending Pool Factory
-/// @author Jet Jadeja <jet@rari.capital>
+/// @author Jet Jadeja <jet@pentagon.xyz>
 /// @notice Factory used to deploy isolated lending pools.
 contract LendingPoolFactory is Auth {
     using Bytes32AddressLib for address;
