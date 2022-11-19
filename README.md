@@ -17,7 +17,7 @@ While balances can no longer be fungible with this model, ERC20 and ERC1155 wrap
 Another interesting feature built into the lending protocol is the storage of funds in ERC4626 vaults. Rather than holding the tokens within the `LendingPool` contract, they are transfered to an ERC4626 vault specified by the pool creator. This enables idle assets to be put to use in a variety of different ways (e.g. earning interest, metagovernance (token delegation), etc).
 
 <p align="center">
-  <img src="https://i.imgur.com/FugCHSU.png" width="400px" />
+  <img src="https://i.imgur.com/EfGL9MA.png" width="400px" />
 </p>
 
 ## Setup
