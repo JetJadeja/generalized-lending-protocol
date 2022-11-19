@@ -28,3 +28,7 @@ This repository uses Foundry for compilation and testing. To build and test the 
 forge build #compile
 forge test  # test
 ```
+
+### Credits
+
+I'd like to thank [Jack Longarzo](https://github.com/JLongarzo), [Pedro Maia](https://github.com/pedrommaiaa), [Jai Bhavnani](https://github.com/JBhav24), [Joey Santoro](https://github.com/Joeysantoro), and [t11s](https://github.com/transmissions11) for their support on this project.
